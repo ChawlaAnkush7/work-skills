@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.ff-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.ff-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.header-bg {
+  background-image: url('./assets/images/png/header-bg-img.webp');
+}
+
+.join-grow-section-bg {
+  background-image: url('./assets//images/png/join-grow-bg.webp');
+}
+
+.footer-bg {
+  background-image: url('./assets/images/png/footer-bg.webp');
+}
+
+.mail-card {
+  box-shadow: 0px 1px 40px 0px rgba(0, 0, 0, 0.10);
+}
+
+.accordion-title {
+  cursor: pointer;
+}
+
+.accordion-item {
+  border: 1px solid #ccc;
+  padding-block: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  visibility: hidden;
+  height: auto;
+  transition: max-height 300ms ease-in-out, padding 300ms ease-in-out, visibility 300ms ease-in-out;
+}
+
+.accordion-content.open {
+  max-height: 300px;
+  padding-top: 12px;
+  height: auto;
+  visibility: visible;
+}
+
+input,
+textarea {
+  border-radius: 5px;
+  background: #FFF;
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #00000030, #00000000);
+  border-image-slice: 1;
+}
+
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: all 200ms linear;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: all 200ms linear;
+}
+
+.nav-link:hover::after {
+  width: 14.434px;
+}
+
+.nav-link:hover::before {
+  width: 14.434px;
+}
+
+.view-card:hover .extra-stuff {
+  opacity: 1;
+}
+
+span[class^="dot-"] {
+  opacity: 0;
+}
+
+.dot-one {
+  animation: dot-one 2s infinite linear
+}
+
+.dot-two {
+  animation: dot-two 2s infinite linear
+}
+
+.dot-three {
+  animation: dot-three 2s infinite linear
+}
+
+.social-icon {
+  transition: all 200ms linear;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes dot-one {
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dot-two {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dot-three {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
